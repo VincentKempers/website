@@ -1,0 +1,354 @@
+* {
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Helvetica Neue', 'Helvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', system-ui, sans-serif;
+    font-size: 14px;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    font-weight: 300;
+    height: 100%;
+    background-color: black;
+    color: white;
+    fill: white;
+    letter-spacing: 3px;
+}
+
+@media screen and (min-width: 32em) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 40em) {
+    html {
+        font-size: 18px;
+    }
+}
+
+body {
+    height: 100%;
+}
+
+a {
+    letter-spacing: inherit;
+    text-decoration: none;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    background-color: white;
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0, 1);
+}
+
+a:focus {
+    outline: 0;
+}
+
+a:hover::after,
+a:focus::after {
+    transform: scaleX(1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bg-image img,
+.gradient-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.bg-image img {
+    object-fit: cover;
+    object-position: bottom center;
+    opacity: .8;
+}
+
+.gradient-overlay {
+    background: linear-gradient(0deg, rgba(26, 26, 26, 0), rgba(26, 26, 26, 1) 80%);
+}
+
+header.top-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    font-weight: 100;
+    padding: 1em;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 15;
+}
+
+header.top-bar>a {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: inherit;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+header.top-bar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 45em) {
+    header.top-bar {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 2em;
+    }
+    header.top-bar>a {
+        margin-bottom: 0;
+    }
+    header.top-bar nav {
+        flex-grow: 1;
+        max-width: 25em;
+    }
+}
+
+section {
+    min-height: 100%;
+    padding: 2em;
+    padding-top: 7em;
+    /* offset for header bar */
+}
+
+@media (min-width: 45em) {
+    section {
+        padding-top: 5em;
+    }
+}
+
+section h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-bottom: 1em;
+    letter-spacing: 6px;
+}
+
+section p {
+    letter-spacing: 4px;
+    line-height: 1.4;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    max-width: 32em;
+}
+
+#about img {
+    width: 7em;
+    height: 7em;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 1em auto;
+}
+
+#projects .grid article {
+    position: relative;
+}
+
+#projects .grid article a {
+    width: 100%;
+    height: 100%;
+}
+
+#projects .grid article h3 {
+    letter-spacing: 3px;
+    padding-bottom: 1em;
+}
+
+#projects .grid article img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#projects .grid article p {
+    width: 100%;
+    font-size: 14px;
+}
+
+#projects .grid article footer {
+    font-size: 0.6em;
+}
+
+#blog .grid article {
+    position: relative;
+}
+
+#blog .grid article a {
+    width: 100%;
+    height: 100%;
+}
+
+#blog .grid article h3 {
+    letter-spacing: 3px;
+    padding-bottom: 1em;
+}
+
+#blog .grid article img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#blog .grid article p {
+    width: 100%;
+    font-size: 14px;
+}
+
+#blog .grid article footer {
+    font-size: 0.6em;
+}
+
+#socials .grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#socials .grid svg {
+    stroke: white;
+    margin-right: 1em;
+}
+
+body>footer {
+    text-align: center;
+    opacity: 0.5;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+body>footer code {
+    letter-spacing: 0;
+}
+
+.logo {
+    mix-blend-mode: overlay;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    max-width: 18em;
+    transition: 10ms cubic-bezier(0.4, 0, 0, 1);
+    pointer-events: none;
+    z-index: -1;
+}
+
+.logo svg {
+    display: block;
+    margin: 1em auto;
+    width: 90%;
+    height: auto;
+}
+
+.logo h1 {
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+.logo h1 div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid {
+    max-width: 50em;
+    margin: 1em auto;
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    grid-gap: 2em;
+}
+
+@media (min-width: 35em) {
+    .grid {
+        grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    }
+}
+
+.grid a {
+    display: block;
+    padding: 0.5em;
+    border: 1px solid white;
+    transition: 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.grid a:hover,
+.grid a:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.grid a::after {
+    display: none;
+}
+
+.single-project {
+    display: flex;
+    flex-direction: column;
+}
+
+.single-project h1 {
+    text-align: center;
+}
+
+.single-project img {
+    align-content: center;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 80%;
+}
+
+.single-project p {
+    text-align: center;
+    margin-top: 2em;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+}
+
+.single-project footer p {
+    text-transform: uppercase;
+    font-size: 0.6em;
+    color: grey;
+    letter-spacing: 0.5em;
+}
+
+.ulAlignment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
