@@ -17,7 +17,6 @@ const year = new Date().getFullYear()
       <h1 class="name">{{ profile.name }}</h1>
       <p class="role">
         {{ profile.role }}
-        <span class="muted">· previously {{ profile.previously }}</span>
       </p>
       <p class="location">{{ profile.location }}</p>
     </header>
