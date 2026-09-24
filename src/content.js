@@ -3,8 +3,7 @@
 
 export const profile = {
   name: 'Vincent Kempers',
-  role: 'Support Engineer',
-  previously: 'Senior Front-end Developer',
+  role: 'Support Engineer & Senior Front-end Developer',
   location: 'Amsterdam, NL',
   avatar: 'avatar.png', // file in /public
   intro: [
@@ -27,14 +26,14 @@ export const experience = [
     period: '2022 — 2023',
     role: 'Web Developer',
     company: 'usmedia',
-    url: '',
-    description: 'Building websites and web applications in Amsterdam with JavaScript and SASS.',
+    url: 'https://www.usmedia.nl/',
+    description: 'Building websites and web applications in Amsterdam with JavaScript, SASS, Wordpress, AngularJS and Tailwind.',
   },
   {
     period: '2020 — 2022',
     role: 'Senior Web Developer',
     company: 'Vriend van de Show',
-    url: '',
+    url: 'https://vriendvandeshow.nl/',
     description: 'Owned the front end: Vue, Nuxt, GraphQL, Tailwind, TypeScript and React Native. Did code reviews and releases, improved accessibility and built web animations with GSAP and Anime.js.',
   },
   {
@@ -48,7 +47,7 @@ export const experience = [
     period: '2019',
     role: 'Front-end Web Developer',
     company: 'Atabix Solutions',
-    url: '',
+    url: 'https://www.atabix.nl/',
     description: 'Started as an intern, then built websites and web tools for a range of clients with Vue.js, JavaScript and TypeScript.',
   },
   {
