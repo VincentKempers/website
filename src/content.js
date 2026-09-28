@@ -85,7 +85,7 @@ export const projects = [
   },
   {
     title: 'Van Gogh app',
-    description: 'A command-line weather app experiment.',
+    description: 'van Gogh museum complete package for data analyzation.',
     tags: ['Node.js', 'CLI'],
     url: 'https://github.com/VincentKempers/van-gogh-app',
   },
